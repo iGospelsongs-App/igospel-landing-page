@@ -42,18 +42,18 @@ function Home() {
   return (
     <main className="bg-black">
       {/* hero section starts here */}
-      <div className='h-[100vh] w-full'>
+      <div className='h-[100%] w-full'>
         <Navbar />
-        <Element name="about" className=''>
-          <div className='flex align-center flex-col lg:flex-row m-4 md:ml-6 overflow-hidden h-[100vh] relative'>
+        <div className=''>
+          <div className='flex align-center flex-col lg:flex-row m-4 md:ml-6 overflow-hidden h-[100%] relative'>
             {/* left section  */}
             <div className='lg:flex-[0.5] flex-col mt-[220px] my-5 lg:ml-9 z-10'>
               <div className='text-[34px] text-center lg:text-left lg:text-[64px] leading-[50px] lg:leading-[70px] pb-7 font-sfpro'>Enjoy quality gospel music, with the new <span className='text-[#ff375fd2]'>
                 iGospel</span>  app</div>
               <div className='font-sfpro font-[300] text-center text-[#F1F1F1] lg:text-left pb-7 text-sm lg:text-xl'>Be the first to get the app news: Join the waitlist by <br /> subscribing to our newsletter</div>
               <form className='flex lg:flex-[0.5] flex-1 flex-col items-center md:items-start'>
-                <input type="text" placeholder='Email' className='pl-2 mb-4 text-[12px] w-[300px] h-[40px] bg-transparent border-[1px] border-gray-500 rounded-lg ' />
-                <div className='text-center py-[12px] lg:py-[8px] bg-[#FF375F] hover:bg-[#ff375fd2] w-[300px] text-xs lg:text-base rounded-lg cursor-pointer'>Join waitlist</div>
+                <input type="text" placeholder='Email' className='pl-2 mb-4 text-[12px] w-full lg:w-[300px] h-[40px] bg-transparent border-[1px] border-gray-500 rounded-lg ' />
+                <div className='text-center py-[12px] lg:py-[8px] bg-[#FF375F] hover:bg-[#ff375fd2] w-full lg:w-[300px] text-xs lg:text-base rounded-lg cursor-pointer'>Join waitlist</div>
               </form>
             </div>
 
@@ -63,8 +63,8 @@ function Home() {
               <div className="absolute inset-0 flex items-center justify-center bg-black opacity-80 md:opacity-70 lg:opacity-10"></div>
             </div>
           </div>
-
-        </Element>
+          <Element name="about"></Element>
+        </div>
       </div>
 
       {/* next section here  */}
@@ -74,7 +74,7 @@ function Home() {
             <Image src={newReleaseImg} width={400} height={400} alt='new release' />
             <div className="absolute inset-0">
               <div className="h-[250px] w-full md:w-[400px] absolute bottom-0 left-[0%] lg:left-0 bg-gradient-to-t from-white to-transparent"></div>
-            </div>
+              </div>
           </div>
 
           <div className='lg:flex-[0.5] pb-6 lg:pb-0'>
@@ -82,10 +82,11 @@ function Home() {
             <div className='text-black text-xs lg:text-[16px] text-center lg:text-left font-sfpro'>with a powerful belief - that gospel music has the extraordinary ability to touch souls and inspire hearts. Our mission: to make gospel music accessible to everyone, everywhere.</div>
           </div>
         </div>
+        {/* <Element name="features"></Element> */}
       </div>
 
       {/* experience the beauty section  */}
-      <div className='pt-[162px] bg-white pb-20'>
+      <div className='pt-[162px] bg-white pb-20 px-4 lg:px-0'>
         <div className='text-center text-black font-sfpro text-2xl lg:text-[40px] font-bold'>
           Experience the beauty of the gospel at your <span className='text-[#ff375fd2]'>Fingertips</span>
         </div>
@@ -122,6 +123,7 @@ function Home() {
         <div className='text-center text-white font-sfpro text-2xl lg:text-[40px] mx-8 lg:mx-[60px] font-bold'>
           Spreading the Gospel to the world, <br /> one way at a time
         </div>
+        <Element name="features"></Element>
         <div className='text-center text-[#A1A1A1] font-sfpro text-xs lg:text-[14px] mx-8 lg:mx-[60px] pt-4'>
           We have the zeal, mindset mixed with strong team spirit to serve the accurate content which we <br /> believe that our audience we love.
         </div>
@@ -132,7 +134,6 @@ function Home() {
           description='with the iGospel app, get access to over 20million plus songs from all over the world, while enjoying unlimited listening time and quality music library.'
           image={devotion}
         />
-
         <FeaturesSection
           title='Dedicated to Delivering Quality Gospel Music'
           description='with the iGospel app, get access to over 20million plus songs from all over the world, while enjoying unlimited listening time and quality music library.'

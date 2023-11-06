@@ -36,12 +36,12 @@ function Navbar() {
       </div>
       <div className="hidden lg:flex lg:gap-x-12">
         {navigation.map((item, i) => (
-          <a key={item.name} href={item.href} className={`text-sm font-normal font-sfpro leading-6 text-white px-5 py-1 ${i === navigation.length - 1 && 'bg-[#E90936] rounded-2xl'}`}>
-            {/* <Link to={item.href} smooth duration={500}> */}
+          <Link to={item.href} smooth duration={500} key={item.name}  className={`text-sm font-normal font-sfpro leading-6 text-white px-5 py-1 ${i === navigation.length - 1 && 'bg-[#E90936] rounded-2xl'}`}>
+            {/* <> */}
               {item.name}
-            {/* </Link> */}
+            {/* </> */}
             
-          </a>
+          </Link>
         ))}
       </div>
     </nav>
