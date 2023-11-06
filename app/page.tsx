@@ -54,19 +54,21 @@ function Home() {
   }
 
   const handleSubmit = async () => {
-    if(email !== '' && emailPattern.test(email)){
+    if (email !== '' && emailPattern.test(email)) {
       setLoading(true)
       try {
-        const response = await axios.post(subscribeEndpoint, email);
+        const response = await axios.post(subscribeEndpoint, { email });
         setLoading(false);
+        setEmail('')
         console.log(response)
-      } catch (error) {
+      } catch (error: any) {
         setLoading(false)
-        console.log(error);
+        console.log(error.response.data.error);
       }
     } else {
       setError(true)
     }
+
   }
 
   return (
@@ -88,19 +90,19 @@ function Home() {
                     loading ? (
                       <div className='flex items-center justify-center'>
                         <Puff
-                        height="24"
-                        width="24"
-                        radius={1}
-                        color="black"
-                        ariaLabel="puff-loading"
-                        wrapperStyle={{}}
-                        wrapperClass=""
-                        visible={true}
-                      />
+                          height="24"
+                          width="24"
+                          radius={1}
+                          color="black"
+                          ariaLabel="puff-loading"
+                          wrapperStyle={{}}
+                          wrapperClass=""
+                          visible={true}
+                        />
                       </div>
-                      
+
                     ) : 'Join waitlist'
-                  } 
+                  }
                 </div>
               </form>
             </div>
@@ -122,7 +124,7 @@ function Home() {
             <Image src={newReleaseImg} width={400} height={400} alt='new release' />
             <div className="absolute inset-0">
               <div className="h-[250px] w-full md:w-[400px] absolute bottom-0 left-[0%] lg:left-0 bg-gradient-to-t from-white to-transparent"></div>
-              </div>
+            </div>
           </div>
 
           <div className='lg:flex-[0.5] pb-6 lg:pb-0'>

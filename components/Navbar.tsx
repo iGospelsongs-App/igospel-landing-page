@@ -10,7 +10,7 @@ const navigation = [
   { name: 'About', href: 'about' },
   { name: 'Features', href: 'features' },
   { name: 'Support', href: 'support' },
-  { name: 'Company', href: 'company' },
+  { name: 'Newsletter', href: 'newsletter' },
 ]
 
 function Navbar() {
