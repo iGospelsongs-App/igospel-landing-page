@@ -18,6 +18,9 @@ import apple from '../public/assets/images/apple.svg'
 import phone from '../public/assets/images/phone2.svg'
 import Footer from '@/components/Footer';
 import { Element } from 'react-scroll';
+import { useState } from 'react';
+import axios from 'axios';
+import { Puff } from 'react-loader-spinner'
 
 const features = [
   {
@@ -37,7 +40,34 @@ const features = [
   },
 ]
 
+const subscribeEndpoint = 'https://igospelsongs.onrender.com/api/subscribe/';
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 function Home() {
+  const [email, setEmail] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
+
+  const handleEmailChange = (e: any) => {
+    setEmail(e.target.value)
+    setError(false)
+  }
+
+  const handleSubmit = async () => {
+    if(email !== '' && emailPattern.test(email)){
+      setLoading(true)
+      try {
+        const response = await axios.post(subscribeEndpoint, email);
+        setLoading(false);
+        console.log(response)
+      } catch (error) {
+        setLoading(false)
+        console.log(error);
+      }
+    } else {
+      setError(true)
+    }
+  }
 
   return (
     <main className="bg-black">
@@ -52,8 +82,26 @@ function Home() {
                 iGospel</span>  app</div>
               <div className='font-sfpro font-[300] text-center text-[#F1F1F1] lg:text-left pb-7 text-sm lg:text-xl'>Be the first to get the app news: Join the waitlist by <br /> subscribing to our newsletter</div>
               <form className='flex lg:flex-[0.5] flex-1 flex-col items-center md:items-start'>
-                <input type="text" placeholder='Email' className='pl-2 mb-4 text-[12px] w-full lg:w-[300px] h-[40px] bg-transparent border-[1px] border-gray-500 rounded-lg ' />
-                <div className='text-center py-[12px] lg:py-[8px] bg-[#FF375F] hover:bg-[#ff375fd2] w-full lg:w-[300px] text-xs lg:text-base rounded-lg cursor-pointer'>Join waitlist</div>
+                <input type="text" placeholder='Email' value={email} onChange={handleEmailChange} className={`pl-2 outline-none mb-4 text-[12px] w-full lg:w-[300px] h-[40px] bg-transparent border-[1px] ${error ? 'border-red-500' : 'border-gray-500'} rounded-lg`} />
+                <div onClick={handleSubmit} className='text-center py-[12px] lg:py-[8px] bg-[#FF375F] hover:bg-[#ff375fd2] w-full lg:w-[300px] text-xs lg:text-base rounded-lg cursor-pointer'>
+                  {
+                    loading ? (
+                      <div className='flex items-center justify-center'>
+                        <Puff
+                        height="24"
+                        width="24"
+                        radius={1}
+                        color="black"
+                        ariaLabel="puff-loading"
+                        wrapperStyle={{}}
+                        wrapperClass=""
+                        visible={true}
+                      />
+                      </div>
+                      
+                    ) : 'Join waitlist'
+                  } 
+                </div>
               </form>
             </div>
 
