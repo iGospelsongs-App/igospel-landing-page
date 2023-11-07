@@ -21,7 +21,7 @@ function Navbar() {
       <div className="flex lg:flex-1">
         <a href="#" className="-m-1.5 p-1.5 flex items-center">
           <Image src={logo} width={37} height={37} alt='logo' />
-          <span className="text-xl md:text-3xl ml-2 font-sfpro font-bold">IGospel</span>
+          <span className="text-xl text-white md:text-3xl ml-2 font-sfpro font-bold">IGospel</span>
         </a>
       </div>
       <div className="flex lg:hidden">

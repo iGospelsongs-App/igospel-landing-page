@@ -173,7 +173,7 @@ function Home() {
                       <div className="relative w-full overflow-hidden rounded-lg bg-black sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64 p-8">
                         <div className='flex flex-col items-center gap-3'>
                           <Image src={feature.image} alt='img' />
-                          <div className='font-sfpro text-[15px] lg:text-[26px] text-center font-bold '>{feature.title}</div>
+                          <div className='font-sfpro text-[15px] lg:text-[26px] text-white text-center font-bold '>{feature.title}</div>
                           <div className='font-inter text-[7px] lg:text-[13px] text-center text-[#898CA9]'>{feature.desc}</div>
                         </div>
                       </div>
