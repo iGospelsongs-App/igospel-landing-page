@@ -86,7 +86,7 @@ function Home() {
           <div className='flex align-center flex-col lg:flex-row m-4 md:ml-6 overflow-hidden h-[100%] relative'>
             {/* left section  */}
             <div className='lg:flex-[0.5] flex-col mt-[220px] my-5 lg:ml-9 z-10'>
-              <div className='text-[34px] text-center lg:text-left lg:text-[64px] leading-[50px] lg:leading-[70px] pb-7 font-sfpro'>Enjoy quality gospel music, with the new <span className='text-[#ff375fd2]'>
+              <div className='text-[34px] text-center lg:text-left lg:text-[64px] text-white leading-[50px] lg:leading-[70px] pb-7 font-sfpro'>Enjoy quality gospel music, with the new <span className='text-[#ff375fd2]'>
                 iGospel</span>  app</div>
               <div className='font-sfpro font-[300] text-center text-[#F1F1F1] lg:text-left pb-7 text-sm lg:text-xl'>Be the first to get the app news: Join the waitlist by <br /> subscribing to our newsletter</div>
               <form className='flex lg:flex-[0.5] flex-1 flex-col items-center md:items-start'>
