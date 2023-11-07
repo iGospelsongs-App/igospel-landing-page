@@ -21,6 +21,9 @@ import { Element } from 'react-scroll';
 import { useState } from 'react';
 import axios from 'axios';
 import { Puff } from 'react-loader-spinner'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const features = [
   {
@@ -46,11 +49,13 @@ const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 function Home() {
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(false);
+  const [error, setError] = useState('');
+
+  const notify = () => toast("You have joined the waitlist")
 
   const handleEmailChange = (e: any) => {
     setEmail(e.target.value)
-    setError(false)
+    setError('')
   }
 
   const handleSubmit = async () => {
@@ -59,14 +64,15 @@ function Home() {
       try {
         const response = await axios.post(subscribeEndpoint, { email });
         setLoading(false);
-        setEmail('')
-        console.log(response)
+        setEmail('');
+        notify();
       } catch (error: any) {
         setLoading(false)
         console.log(error.response.data.error);
+        setError(error.response.data.error)
       }
     } else {
-      setError(true)
+      setError('Enter a valid email')
     }
 
   }
@@ -104,6 +110,18 @@ function Home() {
                     ) : 'Join waitlist'
                   }
                 </div>
+                <ToastContainer
+                  position="top-left"
+                  autoClose={5000}
+                  hideProgressBar={false}
+                  newestOnTop={false}
+                  closeOnClick
+                  rtl={false}
+                  pauseOnFocusLoss
+                  draggable
+                  pauseOnHover
+                  theme="light"
+                />
               </form>
             </div>
 
