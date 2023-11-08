@@ -83,13 +83,13 @@ function Home() {
       <div className='h-[100%] w-full'>
         <Navbar />
         <div className=''>
-          <div className='flex align-center flex-col lg:flex-row m-4 md:ml-6 overflow-hidden h-[100%] relative'>
+          <div className='flex align-center flex-col lg:flex-row m-4 md:ml-6 mr-0 md:mr-0 mb-0 md:mb-0 overflow-hidden h-[100%] relative'>
             {/* left section  */}
             <div className='lg:flex-[0.5] flex-col mt-[220px] my-5 lg:ml-9 z-10'>
               <div className='text-[34px] text-center lg:text-left lg:text-[64px] text-white leading-[50px] lg:leading-[70px] pb-7 font-sfpro'>Enjoy quality gospel music, with the new <span className='text-[#ff375fd2]'>
                 iGospel</span>  app</div>
               <div className='font-sfpro font-[300] text-center text-[#F1F1F1] lg:text-left pb-7 text-sm lg:text-xl'>Be the first to get the app news: Join the waitlist by <br /> subscribing to our newsletter</div>
-              <form className='flex lg:flex-[0.5] flex-1 flex-col items-center md:items-start'>
+              <form className='flex lg:flex-[0.5] pb-24 flex-1 flex-col items-center md:items-start'>
                 <input type="text" placeholder='Email' value={email} onChange={handleEmailChange} className={`pl-2 outline-none text-white mb-4 text-[12px] w-full lg:w-[300px] h-[40px] bg-transparent border-[1px] ${error ? 'border-red-500' : 'border-gray-500'} rounded-lg`} />
                 <div onClick={handleSubmit} className='text-center py-[12px] lg:py-[8px] bg-[#FF375F] hover:bg-[#ff375fd2] w-full lg:w-[300px] text-xs lg:text-base rounded-lg cursor-pointer'>
                   {
