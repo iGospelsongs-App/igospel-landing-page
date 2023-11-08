@@ -187,11 +187,11 @@ function Home() {
       </div>
 
       {/* different sections here  */}
+      <Element name="features"></Element>
       <div className='pt-[100px] pb-10 bg-black'>
         <div className='text-center text-white font-sfpro text-2xl lg:text-[40px] mx-8 lg:mx-[60px] font-bold'>
           Spreading the Gospel to the world, <br /> one way at a time
         </div>
-        <Element name="features"></Element>
         <div className='text-center text-[#A1A1A1] font-sfpro text-xs lg:text-[14px] mx-8 lg:mx-[60px] pt-4'>
           We have the zeal, mindset mixed with strong team spirit to serve the accurate content which we <br /> believe that our audience we love.
         </div>
@@ -217,6 +217,7 @@ function Home() {
       </div>
 
       {/* shape the future section here  */}
+      <Element name="support"></Element>
       <div className=' bg-white pt-[150px]'>
         <div className='text-center text-black font-sfpro mb-8 lg:mb-[70px] text-2xl lg:text-[40px] mx-8 lg:mx-[60px] font-bold'>
           Shape the future
