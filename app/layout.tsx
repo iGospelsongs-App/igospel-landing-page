@@ -38,7 +38,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${sfPro.variable} ${inter.variable}`}>{children}</body>
+      <body style={{backgroundColor: 'black'}} className={`${sfPro.variable} ${inter.variable}`}>{children}</body>
     </html>
   )
 }

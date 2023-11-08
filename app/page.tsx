@@ -78,7 +78,7 @@ function Home() {
   }
 
   return (
-    <main className="bg-black relative">
+    <main className="bg-black  relative">
       {/* hero section starts here */}
       <div className='sticky top-10 z-50'>
         <Navbar />
@@ -93,7 +93,7 @@ function Home() {
               <div className='font-sfpro font-[300] text-center text-[#F1F1F1] lg:text-left pb-7 text-sm lg:text-xl'>Be the first to get the app news: Join the waitlist by <br /> subscribing to our newsletter</div>
               <form className='flex lg:flex-[0.5] pb-24 flex-1 flex-col items-center md:items-start'>
                 <input type="text" placeholder='Email' value={email} onChange={handleEmailChange} className={`pl-2 outline-none text-white mb-4 text-[12px] w-full lg:w-[300px] h-[40px] bg-transparent border-[1px] ${error ? 'border-red-500' : 'border-gray-500'} rounded-lg`} />
-                <div onClick={handleSubmit} className='text-center py-[12px] lg:py-[8px] bg-[#FF375F] hover:bg-[#ff375fd2] w-full lg:w-[300px] text-xs lg:text-base rounded-lg cursor-pointer'>
+                <div onClick={handleSubmit} className='text-center py-[12px] lg:py-[8px] text-white bg-[#FF375F] hover:bg-[#ff375fd2] w-full lg:w-[300px] text-xs lg:text-base rounded-lg cursor-pointer'>
                   {
                     loading ? (
                       <div className='flex items-center justify-center'>
@@ -128,7 +128,7 @@ function Home() {
             </div>
 
             {/* right section  */}
-            <div className='flex-[0.5] lg:h-[800px] top-52 md:top-0 absolute right-0 z-0 backdrop-brightness-50'>
+            <div className='flex-[0.5] lg:h-[800px] top-52 md:top-4 absolute right-0 z-0 backdrop-brightness-50'>
               <Image src={heroImg} alt='hero-img' width={650} height={700} className='' />
               <div className="absolute inset-0 flex items-center justify-center bg-black opacity-80 md:opacity-70 lg:opacity-10"></div>
             </div>
