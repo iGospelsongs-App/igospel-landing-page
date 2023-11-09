@@ -196,7 +196,7 @@ function Home() {
       <Element name="features"></Element>
       <div className='pt-[100px] pb-10 bg-black'>
         <div className='text-center text-white font-sfpro text-2xl lg:text-[40px] mx-8 lg:mx-[60px] font-bold'>
-          Spreading the Gospel to the world, <br /> one way at a time
+          Interesting features of the IGospel app
         </div>
         <div className='text-center text-[#A1A1A1] font-sfpro text-xs lg:text-[14px] mx-8 lg:mx-[60px] pt-4'>
         This app is rooted in the rich tradition of gospel contents, offers a diverse and extensive collection of gospel songs, sermons, and devotionals.
@@ -227,13 +227,11 @@ function Home() {
       <Element name="support"></Element>
       <div className=' bg-white pt-[150px]'>
         <div className='text-center text-black font-sfpro mb-8 lg:mb-[70px] text-2xl lg:text-[40px] mx-8 lg:mx-[60px] font-bold'>
-        Embrace the future
+          iGospel App is a groundbreaking endeavor
         </div>
         <FeaturesSection
-          title='iGospel is a groundbreaking endeavor designed to connect devout music enthusiasts
-          with soul-lifting songs'
-          description='With your support, we can elevate our collective impact and pave
-          the way for spreading the gospel through spiritual content.'
+          title='It is designed to connect devout music enthusiasts with soul-lifting songs. '
+          description='With your support, we can elevate our collective impact and pave the way for spreading the gospel through spiritual content.'
           image={shape}
           support
         />
