@@ -3,7 +3,6 @@ import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
 import logo from '../public/assets/images/logo.svg'
-import Footer from '@/components/Footer';
 import { Link } from 'react-scroll';
 
 const navigation = [

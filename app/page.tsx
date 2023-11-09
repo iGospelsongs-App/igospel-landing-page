@@ -80,6 +80,7 @@ function Home() {
   return (
     <main className="bg-black relative">
       {/* hero section starts here */}
+      <Element name="newsletter"></Element>
       <div className='sticky top-10 z-50'>
         <Navbar />
       </div>
@@ -101,7 +102,7 @@ function Home() {
                           height="24"
                           width="24"
                           radius={1}
-                          color="black"
+                          color="white"
                           ariaLabel="puff-loading"
                           wrapperStyle={{}}
                           wrapperClass=""
