@@ -28,17 +28,18 @@ import 'react-toastify/dist/ReactToastify.css';
 const features = [
   {
     title: 'Music Library',
-    desc: 'With iGospel, you enjoy quality and filling music libraries to your taste.',
+    desc: 'A comprehensive library of gospel music, covering various sub-genres of songs you would love',
     image: music
   },
   {
+
     title: 'Offline Listening',
-    desc: 'Enjoy offline listening as you can minimize data and cost.',
+    desc: 'Enjoy offline mode. Download your favorite songs, playlists, and sermons to listen to anytime, anywhere.',
     image: song
   },
   {
     title: 'Sermons and Devotional',
-    desc: 'Grow your spirit with daily devotionals and sermons.',
+    desc: 'Dive deeper into your faith and spiritual growth through solid teaching ministrations',
     image: sermon
   },
 ]
@@ -88,10 +89,9 @@ function Home() {
         <div className=''>
           <div className='flex align-center flex-col lg:flex-row m-4 lg:mt-0 md:ml-6 mr-0 md:mr-0 mb-0 md:mb-0 overflow-hidden h-[100%] relative'>
             {/* left section  */}
-            <div className='lg:flex-[0.5] flex-col mt-[80px] my-5 ml:0 px-4 lg:px-0 lg:ml-9 z-10'>
-              <div className='text-[34px] text-center lg:text-left lg:text-[64px] text-white leading-[50px] lg:leading-[70px] pb-20 font-sfpro'>Enjoy quality gospel music, with the new <span className='text-[#ff375fd2]'>
-                iGospel</span>  app</div>
-              <div className='font-sfpro font-[300] text-center text-[#F1F1F1] lg:text-left pb-7 text-sm lg:text-xl'>Be the first to get the app news: Join the waitlist by <br /> subscribing to our newsletter</div>
+            <div className='lg:flex-[0.5] flex-col mt-[80px] pb-0 md:pb-20 my-5 ml:0 px-4 lg:px-0 lg:ml-9 z-10'>
+              <div className='text-[34px] text-center lg:text-left lg:text-[64px] text-white leading-[50px] lg:leading-[70px] pb-5 font-sfpro'>Enjoy soul-lifting music, sermons, and devotionals in one app.</div>
+              <div className='font-sfpro font-[300] text-center text-[#F1F1F1] lg:text-left pb-7 text-sm lg:text-xl'>Join millions of aspiring people anticipating getting the app</div>
               <form className='flex lg:flex-[0.5] pb-24 flex-1 flex-col items-center md:items-start'>
                 <input type="text" placeholder='Email' value={email} onChange={handleEmailChange} className={`pl-2 outline-none text-white mb-4 text-[12px] w-full lg:w-[300px] h-[40px] bg-transparent border-[1px] ${error ? 'border-red-500' : 'border-gray-500'} rounded-lg`} />
                 <div onClick={handleSubmit} className='text-center py-[12px] lg:py-[8px] text-white bg-[#FF375F] hover:bg-[#ff375fd2] w-full lg:w-[300px] text-xs lg:text-base rounded-lg cursor-pointer'>
@@ -149,8 +149,11 @@ function Home() {
           </div>
 
           <div className='lg:flex-[0.5] pb-6 lg:pb-0'>
-            <div className='text-black text-2xl lg:text-[36px] text-center lg:text-left font-sfpro font-bold mb-[19px]'>Our Journey to Spread the Gospel Through <span className='text-[#ff375fd2]'>Music</span> </div>
-            <div className='text-black text-xs lg:text-[16px] text-center lg:text-left font-sfpro'>with a powerful belief - that gospel music has the extraordinary ability to touch souls and inspire hearts. Our mission: to make gospel music accessible to everyone, everywhere.</div>
+            <div className='text-black text-2xl lg:text-[36px] text-center lg:text-left font-sfpro font-bold mb-[19px]'>Your journey to strengthen your faith through edifying content begins here.</div>
+            <div className='text-black text-xs lg:text-[16px] text-center lg:text-left font-sfpro'>iGospel is the ultimate gospel music app designed to connect devout music enthusiasts
+              with soul-stirring songs, powerful sermons, and inspirational devotionals. Rooted in the
+              rich tradition of gospel contents, this app offers a diverse and extensive collection of
+              gospel songs and spiritual contents.</div>
           </div>
         </div>
         {/* <Element name="features"></Element> */}
@@ -159,10 +162,10 @@ function Home() {
       {/* experience the beauty section  */}
       <div className='pt-[162px] bg-white pb-20 px-4 lg:px-0'>
         <div className='text-center text-black font-sfpro text-2xl lg:text-[40px] font-bold'>
-          Experience the beauty of the gospel at your <span className='text-[#ff375fd2]'>Fingertips</span>
+        Explore a vast music library with a user-friendly interface and a great user  <span className='text-[#ff375fd2]'>experience</span>
         </div>
         <div className='text-center text-[#A1A1A1] font-sfpro text-xs lg:text-[14px] pt-4'>
-          A swift and dedicated app for gospel songs, the expression of the Kingdom. Enjoy the wonderful features of iGospel
+        Get on the go alongside edifying contents
         </div>
 
         {/* features cards here  */}
@@ -196,25 +199,26 @@ function Home() {
           Spreading the Gospel to the world, <br /> one way at a time
         </div>
         <div className='text-center text-[#A1A1A1] font-sfpro text-xs lg:text-[14px] mx-8 lg:mx-[60px] pt-4'>
-          We have the zeal, mindset mixed with strong team spirit to serve the accurate content which we <br /> believe that our audience we love.
+        This app is rooted in the rich tradition of gospel contents, offers a diverse and extensive collection of gospel songs, sermons, and devotionals.
         </div>
 
         {/* different sections start  */}
         <FeaturesSection
-          title='Dedicated to Delivering Quality Gospel Music'
-          description='with the iGospel app, get access to over 20million plus songs from all over the world, while enjoying unlimited listening time and quality music library.'
+          title='Listen on-the-go to your favorite gospel music.'
+          description='Get access to over 20 million songs from all over the world while enjoying unlimited
+          listening time and a quality music library.'
           image={devotion}
         />
         <FeaturesSection
-          title='Dedicated to Delivering Quality Gospel Music'
-          description='with the iGospel app, get access to over 20million plus songs from all over the world, while enjoying unlimited listening time and quality music library.'
+          title='Get fortified anywhere, anytime!'
+          description='Boost your faith through inspirational preaching and the teaching of Gods word.'
           image={sermonImage}
           rev
         />
 
         <FeaturesSection
-          title='get daily devotional updates on iGospel'
-          description='Keep and awaken your spirit consistently with daily devotionals.'
+          title='Fellowship with Your Maker'
+          description='Consume a multitude of Christian devotions daily.'
           image={foodImage}
         />
       </div>
@@ -223,11 +227,13 @@ function Home() {
       <Element name="support"></Element>
       <div className=' bg-white pt-[150px]'>
         <div className='text-center text-black font-sfpro mb-8 lg:mb-[70px] text-2xl lg:text-[40px] mx-8 lg:mx-[60px] font-bold'>
-          Shape the future
+        Embrace the future
         </div>
         <FeaturesSection
-          title='join us on an exciting journey to shape the future of iGospel App!'
-          description='Your support is valuable to us and we believe that together, we can create something truly remarkable.'
+          title='iGospel is a groundbreaking endeavor designed to connect devout music enthusiasts
+          with soul-lifting songs'
+          description='With your support, we can elevate our collective impact and pave
+          the way for spreading the gospel through spiritual content.'
           image={shape}
           support
         />
