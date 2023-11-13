@@ -144,7 +144,7 @@ function Home() {
           <div className='lg:flex-[0.5] relative'>
             <Image src={newReleaseImg} width={400} height={400} alt='new release' />
             <div className="absolute inset-0">
-              <div className="h-[250px] w-full md:w-[400px] absolute bottom-0 left-[0%] lg:left-0 bg-gradient-to-t from-white to-transparent"></div>
+              <div className="h-[200px] lg:h-[250px] w-full md:w-[400px] absolute bottom-0 left-[0%] lg:left-0 bg-gradient-to-t from-white to-transparent"></div>
             </div>
           </div>
 

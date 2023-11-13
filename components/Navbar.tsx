@@ -34,7 +34,7 @@ function Navbar() {
           </button>
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
-          {navigation.map((item, i) => (
+          {navigation.map((item: any, i: number) => (
             <Link to={item.href} smooth duration={500} key={item.name} className={`text-sm font-normal cursor-pointer font-sfpro leading-6 text-white px-5 py-1 ${i === navigation.length - 1 && 'bg-[#E90936] rounded-2xl'}`}>
               {item.name}
             </Link>
@@ -64,6 +64,7 @@ function Navbar() {
                   <Link
                     key={item.name}
                     to={item.href}
+                    onClick={() => setMobileMenuOpen(false)}
                     className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-900 ${i === navigation.length - 1 && 'bg-[#E90936] rounded-2xl text-white'}`}
                   >
                     {item.name}
