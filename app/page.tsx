@@ -24,8 +24,13 @@ import { Puff } from 'react-loader-spinner'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+interface FeaturesType {
+  title: string;
+  desc: string;
+  image: HTMLImageElement;
+}
 
-const features = [
+const features: FeaturesType[] = [
   {
     title: 'Music Library',
     desc: 'A comprehensive library of gospel music, covering various sub-genres of songs you would love',
@@ -93,7 +98,9 @@ function Home() {
               <div className='text-[34px] text-center lg:text-left lg:text-[64px] text-white leading-[50px] lg:leading-[70px] pb-5 font-sfpro'>Enjoy soul-lifting music, sermons, and devotionals in one app.</div>
               <div className='font-sfpro font-[300] text-center text-[#F1F1F1] lg:text-left pb-7 text-sm lg:text-xl'>Join millions of aspiring people anticipating getting the app</div>
               <form className='flex lg:flex-[0.5] pb-24 flex-1 flex-col items-center md:items-start'>
-                <input type="text" placeholder='Email' value={email} onChange={handleEmailChange} className={`pl-2 outline-none text-white mb-4 text-[12px] w-full lg:w-[300px] h-[40px] bg-transparent border-[1px] ${error ? 'border-red-500' : 'border-gray-500'} rounded-lg`} />
+                <input type="text" placeholder='Email' value={email} onChange={handleEmailChange} className={`pl-2 outline-none text-white text-[12px] w-full lg:w-[300px] h-[40px] bg-transparent border-[1px] ${error ? 'border-red-500 mb-1' : 'border-gray-500 mb-7'} rounded-lg`} />
+                {/* warning message here */}
+                {error && <div className="mb-2 text-xs text-left w-full font-extralight font-sfpro text-red-500">{error}</div>}
                 <div onClick={handleSubmit} className='text-center py-[12px] lg:py-[8px] text-white bg-[#FF375F] hover:bg-[#ff375fd2] w-full lg:w-[300px] text-xs lg:text-base rounded-lg cursor-pointer'>
                   {
                     loading ? (
