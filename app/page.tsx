@@ -92,7 +92,7 @@ function Home() {
       </div>
       <div className='h-[100%] w-full'>
         <div className=''>
-          <div className='flex align-center flex-col lg:flex-row m-4 lg:mt-0 md:ml-6 mr-0 md:mr-0 mb-0 md:mb-0 overflow-hidden h-[100%] relative'>
+          <div className='flex align-center flex-col lg:flex-row m-0 lg:mt-0 lg:ml-6 md:mr-0 mb-0 md:mb-0 overflow-hidden h-[100%] relative'>
             {/* left section  */}
             <div className='lg:flex-[0.5] flex-col mt-[80px] pb-0 md:pb-20 my-5 ml:0 px-4 lg:px-0 lg:ml-9 z-10'>
               <div className='text-[34px] text-center lg:text-left lg:text-[64px] text-white leading-[50px] lg:leading-[70px] pb-5 font-sfpro'>Enjoy soul-lifting music, sermons, and devotionals in one app.</div>
