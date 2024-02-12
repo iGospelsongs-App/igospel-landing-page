@@ -4,13 +4,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
 import logo from '../public/assets/images/logo.svg'
 import { Link } from 'react-scroll';
-
-const navigation = [
-  { name: 'About', href: 'about' },
-  { name: 'Features', href: 'features' },
-  { name: 'Support', href: 'support' },
-  { name: 'Newsletter', href: 'newsletter' },
-]
+import { NavbarNavigationData } from '@/data'
 
 function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -34,8 +28,8 @@ function Navbar() {
           </button>
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
-          {navigation.map((item: any, i: number) => (
-            <Link to={item.href} smooth duration={500} key={item.name} className={`text-sm font-normal cursor-pointer font-sfpro leading-6 text-white px-5 py-1 ${i === navigation.length - 1 && 'bg-[#E90936] rounded-2xl'}`}>
+          {NavbarNavigationData.map((item: any, i: number) => (
+            <Link to={item.href} smooth duration={500} key={item.name} className={`text-sm font-normal cursor-pointer font-sfpro leading-6 text-white px-5 py-1 ${i === NavbarNavigationData.length - 1 && 'bg-[#E90936] rounded-2xl'}`}>
               {item.name}
             </Link>
           ))}
@@ -60,12 +54,12 @@ function Navbar() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                {navigation.map((item, i, arr) => (
+                {NavbarNavigationData.map((item, i, arr) => (
                   <Link
                     key={item.name}
                     to={item.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-900 ${i === navigation.length - 1 && 'bg-[#E90936] rounded-2xl text-white'}`}
+                    className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-900 ${i === NavbarNavigationData.length - 1 && 'bg-[#E90936] rounded-2xl text-white'}`}
                   >
                     {item.name}
                   </Link>
