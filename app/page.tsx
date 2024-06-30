@@ -241,7 +241,7 @@ function Home() {
           description='With your support, we can elevate our collective impact and pave the way for spreading the gospel through spiritual content.'
           image={shape}
           Support
-        />
+          />
       </div>
 
       {/* app coming soon section  */}
