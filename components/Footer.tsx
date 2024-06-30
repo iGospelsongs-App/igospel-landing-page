@@ -14,7 +14,7 @@ function Footer() {
             <div className='flex flex-row gap-4'>
                 <a href="https://instagram.com/igospel_app" target="_blank" rel="noopener noreferrer">
                 <Image src={instagram} alt='logo' className='w-5 lg:w-8' /></a>
-                <a href="https://x.com/igospel_app" target="_blank" rel="noopener noreferrer">
+                <a href="https://x.com/igospel_app" target="_blank" rel="noopener noreferrer">.
                 <Image src={x} alt='logo' className='w-5 lg:w-8' /></a>
                 <a href="https://facebook.com/igospelapp" target="_blank" rel="noopener noreferrer">
                 <Image src={facebook} alt='logo' className='w-5 lg:w-8' /></a>
