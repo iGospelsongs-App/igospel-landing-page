@@ -16,7 +16,7 @@ function Footer() {
                 <Image src={instagram} alt='logo' className='w-5 lg:w-8' /></a>
                 <a href="https://www.linkedin.com/your-profile" target="_blank" rel="noopener noreferrer">
                 <Image src={linkedin} alt='logo' className='w-5 lg:w-8' /></a>
-                <a href="https://www.facebook.com/your-profile" target="_blank" rel="noopener noreferrer">
+                <a href="https://facebook.com/igospelapp" target="_blank" rel="noopener noreferrer">
                 <Image src={facebook} alt='logo' className='w-5 lg:w-8' /></a>
             </div>
         </div>
