@@ -74,7 +74,7 @@ function Home() {
         notify();
       } catch (error: any) {
         setLoading(false)
-        console.log(error.response.data.error);
+        console.log(error.response.data.message);
         setError(error.response.data.error)
       }
     } else {
