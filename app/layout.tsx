@@ -38,6 +38,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <link rel="icon" href="/igospel.png" />
       <body style={{backgroundColor: 'black'}} className={`${sfPro.variable} ${inter.variable}`}>{children}</body>
     </html>
   )
