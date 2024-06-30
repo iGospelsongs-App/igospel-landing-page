@@ -12,9 +12,12 @@ function Footer() {
                 Copyright Information: © iGospel Inc
             </div>
             <div className='flex flex-row gap-4'>
-                <Image src={instagram} alt='logo' className='w-5 lg:w-8' />
-                <Image src={linkedin} alt='logo' className='w-5 lg:w-8' />
-                <Image src={facebook} alt='logo' className='w-5 lg:w-8' />
+                <a href="https://www.instagram.com/your-profile" target="_blank" rel="noopener noreferrer">
+                <Image src={instagram} alt='logo' className='w-5 lg:w-8' /></a>
+                <a href="https://www.linkedin.com/your-profile" target="_blank" rel="noopener noreferrer">
+                <Image src={linkedin} alt='logo' className='w-5 lg:w-8' /></a>
+                <a href="https://www.facebook.com/your-profile" target="_blank" rel="noopener noreferrer">
+                <Image src={facebook} alt='logo' className='w-5 lg:w-8' /></a>
             </div>
         </div>
     </div>
