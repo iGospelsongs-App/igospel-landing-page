@@ -1,6 +1,6 @@
 import React from 'react'
 import instagram from '../public/assets/images/instagram.png'
-import linkedin from '../public/assets/images/linkedin.png'
+import x from '../public/assets/images/x.png'
 import facebook from '../public/assets/images/Facebook.png'
 import Image from 'next/image'
 
@@ -15,7 +15,7 @@ function Footer() {
                 <a href="https://instagram.com/igospel_app" target="_blank" rel="noopener noreferrer">
                 <Image src={instagram} alt='logo' className='w-5 lg:w-8' /></a>
                 <a href="https://www.linkedin.com/your-profile" target="_blank" rel="noopener noreferrer">
-                <Image src={linkedin} alt='logo' className='w-5 lg:w-8' /></a>
+                <Image src={x} alt='logo' className='w-5 lg:w-8' /></a>
                 <a href="https://facebook.com/igospelapp" target="_blank" rel="noopener noreferrer">
                 <Image src={facebook} alt='logo' className='w-5 lg:w-8' /></a>
             </div>
