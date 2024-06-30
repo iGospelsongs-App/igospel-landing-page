@@ -75,7 +75,7 @@ function Home() {
       } catch (error: any) {
         setLoading(false)
         console.log(error.response.data.message);
-        setError(error.response.data.error)
+        setError(error.response.data.message)
       }
     } else {
       setError('Enter a valid email')
