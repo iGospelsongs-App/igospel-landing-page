@@ -49,7 +49,7 @@ const features: FeaturesType[] = [
   },
 ]
 
-const subscribeEndpoint = 'https://igospelsongs.onrender.com/user/subscribe/';
+const subscribeEndpoint = 'https://api.igospel.com.ng/dev/auth/subscribe/';
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function Home() {
