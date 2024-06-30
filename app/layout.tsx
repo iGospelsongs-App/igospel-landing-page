@@ -27,7 +27,7 @@ const sfPro = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'IGospelSongs',
+  title: 'IGospel',
   description: 'Gospel for all',
 }
 
