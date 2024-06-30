@@ -240,7 +240,9 @@ function Home() {
           title='It is designed to connect devout music enthusiasts with soul-lifting songs. '
           description='With your support, we can elevate our collective impact and pave the way for spreading the gospel through spiritual content.'
           image={shape}
-          Support={"https://paystack.com/pay/igospel"}
+          <Link href="https://paystack.com/pay/igospel">
+            <a target="_blank" rel="noopener noreferrer">Support</a>
+          </Link>
         />
       </div>
 
